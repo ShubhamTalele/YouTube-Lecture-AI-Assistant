@@ -1,8 +1,35 @@
+# Virtual Environment
 venv/
+env/
+
+# Environment Variables
 .env
+
+# Python Cache
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+
+# Jupyter
 .ipynb_checkpoints/
+
+# IDE
 .idea/
 .vscode/
+
+# Streamlit
+.streamlit/
+
+# FAISS Database
+vector_db/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model Cache
+.cache/

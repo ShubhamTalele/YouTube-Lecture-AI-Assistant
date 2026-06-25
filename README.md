@@ -732,4 +732,17 @@ Skills:
 
 ---
 
+## Screenshots
+
+### Chat Assistant
+
+![Chat](project_images/chat.png)
+
+### Lecture Summary
+
+![Summary](project_images/summary.png)
+
+
+
 # ⭐ If you found this project useful, consider giving it a star.
+

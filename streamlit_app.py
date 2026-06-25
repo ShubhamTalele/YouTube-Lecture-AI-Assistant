@@ -333,3 +333,56 @@ if st.session_state.chat_history:
         with st.expander(q):
 
             st.write(a)
+st.sidebar.metric("Chunks", st.session_state.chunks)
+st.sidebar.metric("Model", "Llama 3.3")
+st.sidebar.metric("Retriever", "MMR")
+
+if st.sidebar.button("Clear Chat"):
+    st.session_state.chat_history = []
+    st.session_state.rag.chat_history = []
+
+st.download_button(
+    "Download Summary",
+    summary,
+    file_name="lecture_summary.txt"
+)
+
+st.download_button(
+    "Download Flashcards",
+    flashcards,
+    file_name="flashcards.txt"
+)
+
+st.download_button(
+    "Download Summary",
+    summary,
+    file_name="summary.txt"
+)
+
+st.sidebar.markdown("## Project Info")
+
+st.sidebar.info("""
+Model: Llama 3.3 70B
+
+Embeddings:
+all-MiniLM-L6-v2
+
+Vector Store:
+FAISS
+
+Retriever:
+MMR
+
+Framework:
+LangChain
+""")
+
+if st.sidebar.button("Clear Chat"):
+    st.session_state.chat_history = []
+    st.session_state.rag.chat_history = []
+    st.success("Chat Cleared")
+
+st.metric("Chunks", chunks)
+st.metric("Retriever", "MMR")
+st.metric("Embedding Model", "MiniLM")
+
