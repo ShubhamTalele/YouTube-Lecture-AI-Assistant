@@ -341,23 +341,7 @@ if st.sidebar.button("Clear Chat"):
     st.session_state.chat_history = []
     st.session_state.rag.chat_history = []
 
-st.download_button(
-    "Download Summary",
-    summary,
-    file_name="lecture_summary.txt"
-)
 
-st.download_button(
-    "Download Flashcards",
-    flashcards,
-    file_name="flashcards.txt"
-)
-
-st.download_button(
-    "Download Summary",
-    summary,
-    file_name="summary.txt"
-)
 
 st.sidebar.markdown("## Project Info")
 
@@ -376,13 +360,3 @@ MMR
 Framework:
 LangChain
 """)
-
-if st.sidebar.button("Clear Chat"):
-    st.session_state.chat_history = []
-    st.session_state.rag.chat_history = []
-    st.success("Chat Cleared")
-
-st.metric("Chunks", chunks)
-st.metric("Retriever", "MMR")
-st.metric("Embedding Model", "MiniLM")
-
